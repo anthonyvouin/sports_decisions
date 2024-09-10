@@ -23,6 +23,7 @@ const props = defineProps({
 
 .bg-primary {
   background-color: #003049 !important;
+  margin: 5px;
 }
 
 .text-info {
