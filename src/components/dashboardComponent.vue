@@ -1,10 +1,10 @@
 <template>
   <div class="container-fluid bg-dark text-white custom-row ">
-    <div class="table-responsive">
-      <table class="table table-dark table-bordered table-hover">
+    <div class="table-responsive ">
+      <table class="table table-dark table-bordered table-hover ">
         <thead>
           <tr class="bg-primary">
-            <th></th>
+            <th>Name</th>
             <th>
               End of Contracts
               <button @click="toggleSortDirection" class="btn btn-sm btn-light ms-2">
@@ -16,17 +16,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="player in sortedPlayers" :key="player.id">
-            <td class="custom-row">
+          <tr  class="vertical-center" v-for="player in sortedPlayers" :key="player.id">
+            <td >
               <PlayerComponent :user="player" />
             </td>
-            <td class="vertical-center" :style="{ color: player.contract_end_status }">
+            <td :style="{ color: player.contract_end_status }">
               {{ formatDate(player.contract_end) }}
             </td>
-            <td class="vertical-center">
+            <td >
               {{ player.option ? player.option : '--' }}
             </td>
-            <td class="vertical-center">
+            <td >
               {{ player.option_validity ? formatDate(player.option_validity) : '--' }}
             </td>
           </tr>
@@ -88,5 +88,13 @@ const sortedPlayers = computed(() => {
 
 .custom-row td, th {
   border: none;
+}
+
+.table-bordered {
+  border-collapse: collapse; /* Assure que les bordures ne se superposent pas */
+}
+
+.custom-row th {
+  background : #003049 !important;
 }
 </style>
