@@ -1,4 +1,4 @@
-# sports_decisons
+# sports_decisions
 
 Test technique 
 
