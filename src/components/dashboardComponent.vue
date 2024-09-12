@@ -91,7 +91,7 @@ const sortedPlayers = computed(() => {
 }
 
 .table-bordered {
-  border-collapse: collapse; /* Assure que les bordures ne se superposent pas */
+  border-collapse: collapse; 
 }
 
 .custom-row th {
